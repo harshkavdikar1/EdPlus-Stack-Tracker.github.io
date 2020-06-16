@@ -1,0 +1,45 @@
+<!--DOCTYPE html-->
+<html>
+    <head>
+        <title>
+            Stocks
+        </title>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script src="app.js" ></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container">
+            <form action="" class="form-group" id="addSymbolForm">
+                
+                <div class="card text-center">
+                    <div class="card-body">
+                        <div class="">
+                            <input type="text" class="form-control" id="inputText" placeholder="Stock symbol">
+                            <button type="submit" class="btn btn-primary" > Add Stocks </button>
+                          </div>
+                    </div>
+                  </div>
+                  <div class="card ">
+                      <ul class="list-group" id="symbolsList">
+                         
+                      </ul>
+                  </div>
+                  <div class="card text-center">
+                    <div id="chart_div">
+                    
+                    </div>
+                  </div>
+                  
+                
+            </form>
+        </div>
+    </body>
+    <script type="text/javascript">
+        document.getElementById("addSymbolForm").onsubmit =
+        function(event){
+            event.preventDefault();
+            getData();   
+        }; 
+    </script>
+</html>
